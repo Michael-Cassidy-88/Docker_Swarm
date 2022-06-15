@@ -5,8 +5,6 @@ services: # define services or containers that run the application
         command: /bin/sh -c "while true; do echo Swarm!; sleep 10; done" # runs a command when the image is deployed
         networks:
             - webnet # our network
-        ports:
-            - "5000:5000" # specifies the host of 5000, and the container port of 5000
         deploy:
             replicas: 3 # we will deploy 3 replicas of our image
             placement:
